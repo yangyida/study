@@ -1,0 +1,271 @@
+@charset "utf-8";
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+ul{
+   list-style: none;
+}
+
+img{
+    vertical-align: top;
+}
+
+html{
+    height: 100%;
+    font-family: Arial;
+    color: #666;
+}
+
+body{
+    position: relative;
+    height: 100%;
+}
+
+.page{
+    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: white;
+    font-size: .26rem;
+    display: none;
+}
+
+.page:nth-of-type(1){z-index: 10;}
+.page:nth-of-type(2){z-index: 2;}
+.page:nth-of-type(3){z-index: 3;}
+.page:nth-of-type(4){z-index: 4;}
+.page:nth-of-type(5){z-index: 5;}
+.page:nth-of-type(6){z-index: 6;}
+
+.pageShow{display:block}
+
+.pageHide{
+    opacity: 0;
+    -webkit-transition: opacity 1s linear;
+}
+
+/*欢迎页*/
+.tree{
+    position: absolute;
+    left:0;
+    top:10%;
+    width: 100%;
+    -webkit-animation-name: treean;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.logo{
+    position: absolute;
+    width: 100%;
+    left:0;
+    bottom: 5%;
+    text-align: center;
+    -webkit-animation-name: logoan;
+    -webkit-animation-duration: 400ms;
+    -webkit-animation-delay: 600ms;
+    -webkit-animation-fill-mode: both;
+    -webkit-animation-timing-function: linear;
+}
+
+.logo2{
+    position: relative;
+    margin-top: .5rem;
+    -webkit-animation-name: logo2an;
+    -webkit-animation-duration: 700ms;
+    -webkit-animation-delay: 300ms;
+    -webkit-animation-fill-mode: both;
+}
+
+.title2{
+    margin-top:.2rem;
+    width:6.4rem;
+    height:auto;
+    -webkit-animation-name: logo2an;
+    -webkit-animation-duration: 500ms;
+    -webkit-animation-delay: 500ms;
+    -webkit-animation-fill-mode: both;
+}
+
+.shake{
+    position: absolute;
+    left: 5.09rem;
+    top: -.12rem;
+    width: .28rem;
+    height: .31rem;
+    background-image: url("../img/shake.png");
+    background-size: .28rem .31rem;
+    -webkit-transform-origin: left bottom;
+    -webkit-animation-name: shakean;
+    -webkit-animation-duration: 200ms;
+    -webkit-animation-delay: 1400ms;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.cloud{
+    position: absolute;
+    background-image: url("../img/cloud.png");
+    background-size: contain;
+}
+
+.cloud:nth-of-type(1){
+    left: 4.32rem;
+    top: .15rem;
+    width: .58rem;
+    height: .44rem;
+}
+
+.cloud:nth-of-type(2){
+    left: .79rem;
+    top: .77rem;
+    width: .91rem;
+    height: .70rem;
+}
+
+.cloud:nth-of-type(3){
+    left: 4.02rem;
+    top: 1.42rem;
+    width: .54rem;
+    height: .41rem;
+}
+
+@-webkit-keyframes treean {
+    0%{
+        -webkit-transform: translateY(2rem);
+        opacity: 0;
+    }
+    100%{
+        -webkit-transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes logoan {
+    0%{
+        -webkit-transform: translateY(.8rem);
+        opacity: 0;
+    }
+    100%{
+        -webkit-transform: translateY(0rem);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes logo2an {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(.8rem);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateY(0rem);
+    }
+}
+
+@-webkit-keyframes title2an {
+    0%{
+        opacity: 0;
+        -webkit-transform: translateY(.8rem);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: translateY(0rem);
+    }
+}
+
+@-webkit-keyframes shakean {
+    0%{
+        opacity: 0;
+        -webkit-transform: rotate(25deg);
+    }
+    25%{
+        opacity: .25;
+        -webkit-transform: rotate(-25deg);
+    }
+    50%{
+        opacity: .5;
+        -webkit-transform: rotate(25deg);
+    }
+    75%{
+        opacity: .75;
+        -webkit-transform: rotate(-25deg);
+    }
+    100%{
+        opacity: 1;
+        -webkit-transform: rotate(0deg);
+    }
+}
+
+.clear:after{
+    display: block;
+    content: ".";
+    height: 0px;
+    overflow: hidden;
+    clear: both;
+}
+
+.swiper{
+    position: relative;
+    background-color: black;
+}
+
+.swiper-pics{
+    position: relative;
+    width: 500%;
+    height: 3.6rem;
+}
+
+.swiper-pics>li{
+    position: absolute;
+    width: 20%;
+    top: 0;
+}
+
+.swiper-pics>li:nth-child(1){left:0%;}
+.swiper-pics>li:nth-child(2){left:20%;}
+.swiper-pics>li:nth-child(3){left:40%;}
+.swiper-pics>li:nth-child(4){left:60%;}
+.swiper-pics>li:nth-child(5){left:80%;}
+
+.swiper-pics>li>img{
+    width: 100%;
+    height: 3.6rem;
+}
+
+.swiper-bottom{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    font-size: .34rem;
+    color: azure;
+}
+
+.swiper-tip{
+    float: left;
+    margin-left: .2rem;
+}
+
+.swiper-point{
+    float: right;
+    margin-right: .2rem;
+}
+
+.swiper-point>ol{
+    display: inline-block;
+    width: .2rem;
+    height: .2rem;
+    border-radius: 50% 50%;
+    background-color: #666666;
+}
+
+.pointSelect{
+    background-color: white !important;
+}

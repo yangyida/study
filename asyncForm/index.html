@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="lib/jquery-1.9.1.js"></script>
+        <script src="js/asyncForm.js"></script>
+    </head>
+    <script type="text/javascript">
+        window.onload = function(){
+            asyncForm("myForm","");
+        };
+    </script>
+    <body>
+        <form name="myForm">
+            <input type="text" name="account"><br>
+            <input type="password" name="pass"><br>
+            <input type="file" name="fl">
+        </form>
+    </body>
+</html>

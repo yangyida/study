@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .clear:after{
+                display: block;
+                content: ".";
+                height: 0px;
+                overflow: hidden;
+                visibility: hidden;
+                clear: both;
+            }
+            header{
+                height: 200px;
+                background-color: aliceblue;
+            }
+            article{
+                padding: 4px;
+                height: 400px;
+                background-color: aqua;
+            }
+            aside{
+                float: left;
+                width: 300px;
+                height: inherit;
+                background-color: brown;
+            }
+            section{
+                margin-left: 304px;
+                height: inherit;
+                background-color: chartreuse;
+            }
+            footer{
+                height: 100px;
+                background-color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <header>页面头部</header>
+        <article class="clear">
+            <aside>侧边栏</aside>
+            <section>内容</section>
+        </article>
+        <footer>页面底部</footer>
+    </body>
+</html>

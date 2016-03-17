@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .box>div{
+                width: 100px;
+                height: 100px;
+                margin: 10px;
+            }
+            .box>:nth-child(1){
+                background-image: -webkit-gradient(linear,center bottom,center top,from(red), to(black));
+            }
+            .box>:nth-child(2){
+                background-image: -webkit-gradient(linear,center top,center bottom,from(orange),to(green));
+            }
+            .box>:nth-child(3){
+                background-image: -webkit-gradient(linear, right center, left center,from(orange),to(green));
+            }
+            .box>:nth-child(4){
+                background-image: linear-gradient(to left, red, orange, yellow, green, blue);
+            }
+            .box>:nth-child(5){
+                background-image: linear-gradient(to bottom, red 0, yellow 80%, blue 90%);
+            }
+            .box>:nth-child(6){
+                background-image: linear-gradient(to right, yellow 50%, red 100%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </body>
+</html>

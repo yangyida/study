@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+        <script src="util/log.js"></script>
+        <script type="text/javascript">
+
+            (function(win, doc, deviceWidth){
+
+                var docEl = doc.documentElement;
+
+                var resize = "onorientationchange" in window ? "orientationchange" : "resize";
+
+                var eventFunc = function(){
+                    docEl.style.fontSize = docEl.clientWidth / (680 / 100) + "px";
+                }
+
+                window.addEventListener(resize, eventFunc, false);
+                doc.addEventListener("DOMContentLoaded", eventFunc, false);
+
+            })(window, document, 640);
+
+        </script>
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            img{
+                vertical-align: middle;
+            }
+            .clear:after{
+                display: block;
+                height: 0px;
+                content: ".";
+                overflow: hidden;
+                clear: both;
+            }
+            .page{
+                float: left;
+                width: 25%;
+                height: 1.7rem;
+                background-image: url("img/xuebitu.jpg");
+                background-size: 6.8rem;
+                background-repeat: no-repeat;
+            }
+            div:nth-child(1){
+                background-position: 0 0;
+            }
+            div:nth-child(2){
+                background-position: -1.7rem 0;
+            }
+            div:nth-child(3){
+                background-position: -3.4rem 0;
+            }
+            div:nth-child(4){
+                background-position: -5.1rem 0;
+            }
+            div:nth-child(5){
+                background-position: 0 -1.7rem ;
+            }
+            div:nth-child(6){
+                background-position: -1.7rem -1.7rem;
+            }
+            div:nth-child(7){
+                background-position: -3.4rem -1.7rem;
+            }
+            div:nth-child(8){
+                background-position: -5.1rem -1.7rem;
+            }
+        </style>
+    </head>
+    <body>
+
+        <section class="clear">
+            <div class="page"></div>
+            <div class="page"></div>
+            <div class="page"></div>
+            <div class="page"></div>
+            <div class="page"></div>
+            <div class="page"></div>
+            <div class="page"></div>
+            <div class="page"></div>
+        </section>
+
+    </body>
+</html>

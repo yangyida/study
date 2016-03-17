@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .box{
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                flex-wrap: wrap;
+                min-width: 400px;
+                align-items: stretch;
+            }
+            .box>:nth-child(1){
+                width: 100%;
+                background-color: red;
+                box-sizing: border-box;
+                padding-left: 300px;
+            }
+            .box>:nth-child(2){
+                width: 300px;
+                min-width: 300px;
+                background-color: blue;
+                margin-left: -100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div id="right" style="line-break: auto;">
+                sdfiosdfhoishfoshfoisdf<br>
+                sdfiosdfhoishfoshfoisdf<br>
+                sdfiosdfhoishfoshfoisdf<br>sdfiosdfhoishfoshfoisdf<br>
+                sdfiosdfhoishfoshfoisdf<br>
+                sdfiosdfhoishfoshfoisdf<br>
+                sdfiosdfhoishfoshfoisdf<br>
+            </div>
+            <div id="left"></div>
+        </div>
+    </body>
+</html>

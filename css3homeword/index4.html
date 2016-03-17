@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="css/base.css" type="text/css" rel="stylesheet">
+        <style type="text/css">
+            nav{
+                position: fixed;
+                width: 240px;
+            }
+            nav li{
+                margin-bottom: 12px;
+                box-shadow: 1px 1px 2px #ccc;
+            }
+            nav a{
+                display: block;
+                background-color: rgb(255,250,230);
+                color: rgb(68, 68,73);
+                line-height: 50px;
+                padding-left: 22px;
+                font-size: 22px;
+                text-shadow: 1px 1px 2px black;
+            }
+            nav a:not(:target):hover{
+                background-color: rgb(221,221,221);
+            }
+            #home:target~nav a[href='#home'],
+            #protfolio:target~nav a[href='#protfolio'],
+            #about:target~nav a[href='#about'],
+            #contact:target~nav a[href='#contact']{
+                background-color: black;
+                color: white;
+            }
+
+            #protfolio:target,
+            #about:target,
+            #contact:target{
+                top: 0%;
+                transition-delay: .3s;
+            }
+
+            html,body{
+                height: 100%;
+            }
+
+            .panel{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                padding-left: 300px;
+                top: -150%;
+                transition: top .8s linear;
+            }
+            .panel:nth-child(1){
+                top: 0;
+            }
+
+        </style>
+    </head>
+    <body>
+
+    <article id="home" class="panel" style="background-color: antiquewhite;">
+        <h1>home</h1>
+    </article>
+    <article id="protfolio" class="panel" style="background-color: bisque;">
+        <h1>protfolio</h1>
+    </article>
+    <article id="about" class="panel" style="background-color: blueviolet;">
+        <h1>about</h1>
+    </article>
+    <article id="contact" class="panel" style="background-color: cadetblue;">
+        <h1>contact</h1>
+    </article>
+
+        <nav>
+            <ul>
+                <li>
+                    <a href="#home">HOME</a>
+                </li>
+                <li>
+                    <a href="#protfolio">PORTFOLIO</a>
+                </li>
+                <li>
+                    <a href="#about">ABOUT ME</a>
+                </li>
+                <li>
+                    <a href="#contact">CONTACT</a>
+                </li>
+            </ul>
+        </nav>
+    </body>
+</html>

@@ -1,0 +1,99 @@
+<!doctype html>
+<html style="background-color: #cccccc;">
+    <head>
+        <meta http-equiv="content-type" content-type="text/html;charset=utf-8">
+        <script src="move.js"></script>
+        <script src="2_3.js"></script>
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .clear:after{
+                display: block;
+                content: ".";
+                height: 0px;
+                visibility: hidden;
+                clear: both;
+            }
+
+            img{
+                vertical-align: middle;
+            }
+
+            li{
+                list-style: none;
+            }
+
+            #images{
+                position: absolute;
+                left : 50%;
+                top : 50%;
+                width: 520px;
+                height: 280px;
+                overflow: hidden;
+                margin-left : -260px;
+                margin-top : -140px;
+            }
+
+            #imagesContaint{
+                width: 3120px;
+            }
+
+            #imagesContaint>li{
+                float: left;
+            }
+
+            #btnsContaint{
+                position: absolute;
+                text-align: center;
+                bottom: 0px;
+                left: 50%;
+                margin-left: -90px;
+            }
+
+            #btnsContaint>li{
+                float: left;
+                margin: 6px;
+                width: 18px;
+                height: 18px;
+                border-radius: 9px;
+                background-color: #cccccc;
+                cursor: pointer;
+            }
+
+        </style>
+    </head>
+    <body>
+            <div id="images">
+                <ul id="imagesContaint" class="clear">
+                    <li>
+                        <img src="images/1.png"/>
+                    </li>
+                    <li>
+                        <img src="images/2.jpg"/>
+                    </li>
+                    <li>
+                        <img src="images/3.jpg"/>
+                    </li>
+                    <li>
+                        <img src="images/4.jpg"/>
+                    </li>
+                    <li>
+                        <img src="images/5.jpg"/>
+                    </li>
+                    <li>
+                        <img src="images/6.jpg"/>
+                    </li>
+                </ul>
+                <ul id="btnsContaint" class="clear">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            .box{
+                display: flex;
+                width: 100%;
+                height: auto;
+                align-items: stretch;
+                flex-direction: row;
+            }
+            .box>:nth-child(1){
+                width: 20%;
+                background-color: aliceblue;
+            }
+            .box>:nth-child(2){
+                width: 80%;
+                background-color: aqua;
+            }
+            .box>:nth-child(3){
+                width: 20%;
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div>
+                <div style="width:100px; height: 1000px; background-color: chartreuse; margin: 20px;"></div>
+            </div>
+            <div></div>
+            <div></div>
+        </div>
+    </body>
+</html>

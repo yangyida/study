@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            li{
+                list-style: none;
+                height: 200px;
+            }
+            .box{
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+            }
+            .box>ul{
+                width: 100%;
+                box-sizing: border-box;
+                display: -webkit-box;
+            }
+            .box>ul>li{
+                -webkit-box-flex: 1;
+                border: 1px solid #ccc;
+                border-width: 0 1px 1px 0;
+            }
+            .box>ul:nth-last-child(1)>li{
+                border-width: 0 1px 0 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </body>
+</html>

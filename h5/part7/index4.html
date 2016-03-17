@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="index4.js"></script>
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            video{
+                vertical-align: middle;
+            }
+            #box{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+            }
+            #containt{
+                position: absolute;
+                top: 100%;
+                left: 0px;
+                width: 100%;
+            }
+            #progressBar{
+                margin-top: 12px;
+                position: relative;
+                height: 4px;
+                background-color: blueviolet;
+            }
+            #progress{
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+                top: -10px;
+                background-color: brown;
+                left: 0px;
+                transform: translateX(-12px);
+            }
+            #progress:hover{
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <video id="v" src="source/Intermission-Walk-in_512kb.mp4"></video>
+            <div id="containt">
+                <button id="playBtn">播放</button>
+                <div id="progressBar">
+                    <span id="progress"></span>
+                </div>
+                <div>
+                    <span id="currentTime"></span>&nbsp;/&nbsp;<span id="totalTime"></span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

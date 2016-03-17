@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+        <script src="util/log.js"></script>
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-
+            每台移动设备的px都不一样
+            设置width=device-width 跟不设置所显示的px的大小一样
+            若设置了width=640则会线性缩放
+        ->
+        <div style="width: 320px; line-height: 32px; font-size: 32px; background-color: black; color: white;">
+            1234567890
+        </div>
+    </body>
+    <script type="text/javascript">
+        log.log(window.innerWidth);
+        log.log(document.documentElement.clientWidth);
+    </script>
+</html>

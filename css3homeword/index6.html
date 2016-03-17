@@ -1,0 +1,325 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link href="css/base.css" type="text/css" rel="stylesheet">
+        <style type="text/css">
+            #box{
+                position: relative;
+                width: 100%;
+                height: 400px;
+                background-image: url("img/waves.gif");
+                background-repeat: repeat-x;
+                background-size: auto 100%;
+                overflow:hidden;
+            }
+
+            .current{
+                z-index: 1000;
+            }
+
+            .box{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+            .box h2{
+                position: absolute;
+                font-size: 50px;
+                color: white;
+                font-weight: 800;
+                text-shadow: 2px 2px 2px #ccc;
+                top: 78px;
+                left: 110%;
+            }
+            .box p{
+                position: absolute;
+                font-size: 18px;
+                width: 500px;
+                color: rgb(145,108,4);
+                font-style: oblique;
+                text-shadow: 2px 2px 2px #ccc;
+                top: 160px;
+                left: 110%;
+            }
+            .box a{
+                position: absolute;
+                font-size: 22px;
+                color: white;
+                text-shadow: 2px 2px 2px #ccc;
+                padding: 10px 20px;
+                border: 10px solid white;
+                border-radius: 30px;
+                background-color: rgba(255,255,255,0.2);
+                transition: background-color .3s linear;
+                top: 272px;
+                left: 10%;
+                opacity: 0;
+            }
+            .box a:hover{
+                background-color: rgba(255,255,255,0.3);
+            }
+            .box img{
+                position: absolute;
+                left: 170%;
+                top: 80px;
+            }
+
+            .current{
+                z-index: 1000;
+            }
+            .box.current h2,.box.current p{
+                left: 10%;
+            }
+            .box.current a{
+                opacity: 1;
+            }
+            .box.current img{
+                left: 70%;
+            }
+
+            /*to left*/
+            @keyframes toLeftHP {
+                0%{
+                    left: 10%;
+                }
+                50%{
+                    left: 30%;
+                }
+                100%{
+                    left: -100%;
+                }
+            }
+            @keyframes toLeftA {
+                0%{
+                    opacity: 1;
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
+            @keyframes toLeftIMG {
+                0%{
+                    left: 70%;
+                }
+                50%{
+                    left: 80%;
+                }
+                100%{
+                    left: -100%;
+                }
+            }
+            .box.toLeft h2{
+                animation: toLeftHP .6s linear both;
+            }
+            .box.toLeft p{
+                animation: toLeftHP .6s linear .5s both;
+            }
+            .box.toLeft a{
+                animation: toLeftA .6s linear both;
+            }
+            .box.toLeft img{
+                animation: toLeftIMG .4s linear 1.1s both;
+            }
+
+            /*from right*/
+            @keyframes fromRightHP {
+                0%{
+                    left: 100%;
+                }
+                100%{
+                    left: 10%;
+                }
+            }
+            @keyframes fromRightA {
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+            @keyframes fromRightIMG {
+                0%{
+                    left: 100%;
+                }
+                100%{
+                    left: 70%;
+                }
+            }
+            .box.fromRight h2{
+                animation: fromRightHP .6s linear 1.5s both;
+            }
+            .box.fromRight p{
+                animation: fromRightHP .6s linear 1.5s both;
+            }
+            .box.fromRight a{
+                animation: fromRightA .6s linear 1.5s both;
+            }
+            .box.fromRight img{
+                animation: fromRightIMG .6s linear 1.5s both;
+            }
+
+
+            /*to right*/
+            @keyframes toRightHP {
+                0%{
+                    left: 10%;
+                }
+                50%{
+                    left: 2%;
+                }
+                100%{
+                    left: 100%;
+                }
+            }
+            @keyframes toRightA {
+                0%{
+                    opacity: 1;
+                }
+                100%{
+                    opacity: 0;
+                }
+            }
+            @keyframes toRightIMG {
+                0%{
+                    left: 70%;
+                }
+                50%{
+                    left: 60%;
+                }
+                100%{
+                    left: 100%;
+                }
+            }
+            .box.toRight h2{
+                animation: toRightHP .6s linear .4s both;
+            }
+            .box.toRight p{
+                animation: toRightHP .6s linear .5s both;
+            }
+            .box.toRight a{
+                animation: toRight .6s linear .4s both;
+            }
+            .box.toRight img{
+                animation: toRightIMG .4s linear;
+            }
+
+            /*from left*/
+            @keyframes fromLeftHP {
+                0%{
+                    left: -50%;
+                }
+                100%{
+                    left: 10%;
+                }
+            }
+            @keyframes fromLeftA {
+                0%{
+                    opacity: 0;
+                }
+                100%{
+                    opacity: 1;
+                }
+            }
+            @keyframes fromLeftIMG {
+                0%{
+                    left: -30%;
+                }
+                100%{
+                    left: 70%;
+                }
+            }
+            .box.fromLeft h2{
+                animation: fromLeftHP .6s linear 1.6s both;
+            }
+            .box.fromLeft p{
+                animation: fromLeftHP .6s linear 1.9s both;
+            }
+            .box.fromLeft a{
+                animation: fromLeftA .6s linear 1.6s both;
+            }
+            .box.fromLeft img{
+                animation: fromLeftIMG .6s linear both 1.1s;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <section class="box current">
+                <h2>Warm welcome</h2>
+                <p>
+                    When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.
+                </p>
+                <a href="#">READ MORE</a>
+                <img src="img/1.png"/>
+            </section>
+            <section class="box">
+                <h2>Easy management</h2>
+                <p>
+                    Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+                </p>
+                <a href="#">READ MORE</a>
+                <img src="img/2.png"/>
+            </section>
+            <section class="box">
+                 <h2>Revolution</h2>
+                 <p>
+                     A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+                 </p>
+                 <a href="#">READ MORE</a>
+                 <img src="img/3.png"/>
+             </section>
+             <section class="box">
+                 <h2>Quality Control</h2>
+                 <p>
+                     Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+                 </p>
+                 <a href="#">READ MORE</a>
+                 <img src="img/4.png"/>
+             </section>
+        </div>
+        <button id="left">左</button>
+        <button id="right">右</button>
+        <script type="text/javascript">
+            var oLeft = document.getElementById("left");
+            var oRight = document.getElementById("right");
+
+            var current = 0;
+            var sectionList = document.querySelectorAll("section");
+
+            oRight.onclick = function(){
+                clear(sectionList[current]);
+                sectionList[current].classList.add("toLeft");
+                current++;
+                if(current >= sectionList.length){
+                    current = 0;
+                };
+                clear(sectionList[current]);
+                sectionList[current].classList.add("fromRight");
+                sectionList[current].classList.add("current");
+            };
+
+            oLeft.onclick = function(){
+                clear(sectionList[current]);
+                sectionList[current].classList.add("toRight");
+                current--;
+                if(current < 0){
+                    current = sectionList.length - 1;
+                };
+                clear(sectionList[current]);
+                sectionList[current].classList.add("fromLeft");
+                sectionList[current].classList.add("current");
+            };
+
+            function clear(o){
+                o.classList.remove("fromLeft");
+                o.classList.remove("fromRight");
+                o.classList.remove("toLeft");
+                o.classList.remove("toRight");
+                o.classList.remove("current");
+            }
+        </script>
+    </body>
+</html>

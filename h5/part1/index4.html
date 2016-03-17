@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form id="fm" action="#">
+            <input type="text" name="ipt">
+            <input type="submit" value="提交">
+            <input type="submit" value="关闭验证提交" formnovalidate><!--关闭验证-->
+        </form>
+    <script type="text/javascript">
+        var oFm = document.getElementById("fm");
+        var oIpt = oFm.ipt;
+
+        oFm.onsubmit = function(){
+
+            if(oIpt.value.trim() == ""){
+                this.ipt.setCustomValidity("该值不能为空!"); //有验证的时候才有用,当关闭验证时候不进行此操作 二次验证时候才触发
+                return false;
+            }
+        };
+
+    </script>
+    </body>
+</html>

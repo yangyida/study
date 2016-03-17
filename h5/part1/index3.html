@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <form>
+        <input type="text" list="list">
+        <datalist id="list">
+            <option value="one"></option>
+            <option value="two"></option>
+            <option value="three"></option>
+        </datalist>
+        <input type="email">
+        <input type="tel">
+        <input type="url">
+        <input type="search">
+        <input type="range" step="2" min="0" max="10" value="2"><!--数值选择器-->
+        <input type="number">
+        <input type="color">
+        <input type="datetime"><!--chrome 不支持-->
+        <input type="datetime-local"><!--完整日期选择-->
+        <input type="time"><!--小时分钟-->
+        <input type="date"><!--显示日期-->
+        <input type="week"><!--显示周-->
+        <input type="month"><!--显示月-->
+        <input type="submit" value="提交" formaction="https://www.baidu.com/">
+            <!-- 相关属性
+
+                placeholder 提示信息
+                autocomplete 是否保存用户输入值 默认为on，关闭提示选择off
+                autofocus 指定表单元素自动获得焦点
+                list和datalist 为输入框构造一个选择列表 list值为datalist标签的id
+                required 代表为必填
+                pattern 正则校验
+
+            -->
+        </form>
+        <script type="text/javascript">
+            var oColor = document.querySelector("input[type='color']");
+            var oDateTimeLocal = document.querySelector("input[type='datetime-local']");
+        </script>
+    </body>
+</html>

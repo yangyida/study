@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="format-detection" content="email=no">
+        <script src="js/log.js"></script>
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function(){
+
+                /*document.addEventListener("touchmove", function(){
+
+                    log.log("x=" + window.scrollX + " " + "y=" + window.scrollY);
+
+                }, false);*/
+
+                document.querySelector("img").addEventListener("touchstart", function(e){
+
+                    e.preventDefault();
+
+                }, false);
+
+                log.log(window.DeviceMotionEvent ? "true" : "false");
+
+            }, false);
+        </script>
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            html{
+                font-size: 22px;
+            }
+            input{
+                font-size: 1rem;
+                -webkit-appearance: none;
+                -webkit-tap-highlight-color: rgba(255,255,255,0);
+                padding: .1rem .6rem;
+                background-color: darkolivegreen;
+                color: white;
+                border: 0;
+                outline: 0;
+                border-radius: .6rem;
+            }
+            p{
+                overflow : hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            123456789109
+        </div>
+        <div style="-webkit-user-select:none;">
+            77704154@qq.com
+        </div>
+        <div>
+            <img src="img/1.jpg" style="-webkit-user-select:none;"/>
+        </div>
+        <div>
+            <input type="text"/><input type="button" value="按钮"/>
+        </div>
+        <p>
+            中华<br/>人民<br/>共和<br/>国
+        </p>
+        <div style="position: relative; background-color: grey; width: 100%; height: 6rem;">
+            <p style="width:4rem; position:absolute; left: 50%; top:50%; transform:translateY(-50%); margin-left: -2rem; ">
+                哦弄破弄弄骗
+            </p>
+        </div>
+        <div style="position:relative;">
+            <input type="text" style="position:fixed;left:0;top:0;"/>
+        </div>
+    </body>
+</html>

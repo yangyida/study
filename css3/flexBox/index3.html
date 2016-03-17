@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <style type="text/css">
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            li{
+                list-style: none;
+            }
+            .clear:after{
+                display: block;
+                content: ".";
+                height: 0px;
+                visibility: hidden;
+                clear: both;
+            }
+            .box{
+                width: 400px;
+            }
+            .box>ul>li{
+                float: left;
+                width: 33.33%;
+                height: 200px;
+                box-sizing: border-box;
+                border: solid #ccc;
+                border-width: 0 1px 1px 0;
+            }
+            .box>ul>li:nth-last-child(1),
+            .box>ul>li:nth-last-child(2),
+            .box>ul>li:nth-last-child(3){
+                border-bottom-width: 0px;
+            }
+            .box>ul>li:nth-child(3n){
+                border-right-width: 0px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box clear">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </body>
+</html>

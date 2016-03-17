@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <link href="css/base.css" rel="stylesheet" type="text/css">
+        <style type="text/css">
+            .box{
+                position: absolute;
+                width: 200px;
+                height: 300px;
+                left: 50%;
+                top: 50%;
+                margin-left: -100px;
+                margin-top: -150px;
+                transform-style: preserve-3d;
+                transform: perspective(2000px);
+            }
+            .box>img{
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                width: 200px;
+                height: auto;
+            }
+            .box>img:nth-child(1){
+                z-index: 10;
+                transform:rotateX(180deg);
+                transition: all .6s linear;
+            }
+            .box>img:nth-child(2){
+                z-index:2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <img src="img/4.jpg"/>
+            <img src="img/4.jpg"/>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <script type="text/javascript" src="photoWall.js"></script>
+        <script type="text/javascript" src="index.js"></script>
+        <style type="text/css">
+            .clear:after{
+                visibility: hidden;
+                content: ".";
+                display: block;
+                clear: both;
+                height: 0px;
+            }
+
+            *{
+                margin: 0px;
+                padding: 0px;
+            }
+            ul,li{
+                list-style: none;
+            }
+            div:active{
+                cursor: help;
+            }
+            img{
+                vertical-align: middle;
+            }
+
+            .containt{
+                width: 720px;
+                height: 570px;
+                margin: 0 auto;
+            }
+
+            .containt>li{
+                float: left;
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="box" class="containt clear" style="margin:300px;">
+            <li><img src="photo/1.jpg"/></li>
+            <li><img src="photo/2.jpg"/></li>
+            <li><img src="photo/3.jpg"/></li>
+            <li><img src="photo/4.jpg"/></li>
+            <li><img src="photo/5.jpg"/></li>
+            <li><img src="photo/1.jpg"/></li>
+            <li><img src="photo/2.jpg"/></li>
+            <li><img src="photo/3.jpg"/></li>
+            <li><img src="photo/4.jpg"/></li>
+        </ul>
+    </body>
+</html>

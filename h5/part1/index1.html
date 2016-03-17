@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <!--语义化标签-->
+        <header>用在页面的头部或者板块的头部</header>
+        <footer>用在页面的底部或者板块的底部</footer>
+        <nav>导航</nav>
+        <section>用来划分区域</section>
+
+        <article>内容主体</article>
+        <aside>附属信息</aside>
+
+        <figure>用于对元素进行组合</figure>
+        <figcaption>figcaption的子元素 用于对figure的内容进行说明</figcaption>
+        <figure>
+            <img style="width:200px; height: auto; vertical-align: middle;" src="http://h.hiphotos.baidu.com/zhidao/pic/item/cefc1e178a82b9013da57a2f738da9773912efa6.jpg"/>
+            <figcaption>一点解析</figcaption>
+        </figure>
+
+        <time datatime="">用来表现时间或日期</time>
+
+        <datalist>选项列表。与input元素配合使用，来定义input可能的值</datalist>
+        <input type="text" list="list">
+        <datalist id="list">
+            <option value="one"></option>
+            <option value="two"></option>
+            <option value="three"></option>
+        </datalist>
+
+        <details open>
+            <summary>点击打开详细信息</summary>
+            <p>这里就是详细信息</p>
+        </details>
+
+        <dialog>
+            <dt>男人</dt>
+            <dd>你好女人</dd>
+            <dt>女人</dt>
+            <dd>滚粗</dd>
+        </dialog>
+
+        <address>定义文章或者页面作者的详细联系方式</address>
+
+        <mark>标记</mark>
+
+        <progress>定义进度条</progress>
+        <progress max="100" value="10"></progress>
+    </body>
+</html>

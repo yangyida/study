@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+    <head>
+        <meta http-equiv="content-type" charset="utf-8">
+        <link href="css/base.css" type="text/css" rel="stylesheet">
+        <style type="text/css">
+            body{
+                background-color: rgb(247,232,225);
+            }
+
+            .box{
+                width: 570px;
+                position: relative;
+            }
+
+            header{
+                height: 66px;
+                width: 100%;
+                position: relative;
+            }
+
+            header>h1{
+                position: absolute;
+                color: white;
+                font-size: 44px;
+                font-weight: 900;
+                line-height: 66px;
+                transition: right .3s ease-in .4s,opacity .3s ease-in .4s;
+                right: 20%;
+                opacity: 0;
+            }
+
+            header>a{
+                position: absolute;
+                top: 50%;
+                margin-top: -22px;
+                width: 49px;
+                height: 42px;
+                background: url(img/arrow.png);
+                transition: left .3s ease-in .6s;
+                left: -20%;
+            }
+
+            #main{
+                position: absolute;
+                width: 100%;
+                left: -200%;
+                transition: left .3s ease-in;
+            }
+
+            #main a{
+                display:block;
+                width: 100%;
+                box-sizing: border-box;
+                line-height: 44px;
+                padding: 22px;
+                font-size: 44px;
+                font-weight: 800;
+                color: rgba(255, 255,255,0.1);
+                text-shadow: 0px 0px 12px rgba(255, 255,255,0.8);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                margin-bottom: 10px;
+                border: 10px solid white;
+                transition: all .3s ease-out;
+            }
+
+            #main a:hover{
+                color: rgba(255, 255,255,0.9);
+                box-shadow: 2px 2px 2px #ccc;
+            }
+
+            #main a:nth-child(1){
+                background-image: url(img/1.jpg);
+            }
+
+            #main a:nth-child(2){
+                background-image: url(img/2.jpg);
+            }
+
+            #main a:nth-child(3){
+                background-image: url(img/3.jpg);
+            }
+
+            .slide{
+                position: absolute;
+                width: 100%;
+                left: -200%;
+                transition: left .3s ease-in;
+                background-size: 100%;
+                background-repeat: no-repeat;
+            }
+
+            .slide>nav>a{
+                float: left;
+                width: 49%;
+                box-sizing: border-box;
+                line-height: 44px;
+                padding: 22px;
+                font-size: 44px;
+                font-weight: 800;
+                color: rgba(255, 255,255,0.1);
+                text-shadow: 0px 0px 12px rgba(255, 255,255,0.8);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                border: 10px solid white;
+                transition: all .3s ease-out;
+            }
+
+            .slide>nav>a:hover{
+                text-shadow: 2px 2px 2px #ccc;
+                color: rgba(255, 255,255,0.9);
+            }
+
+            .slide>nav>a:nth-child(1){
+                margin-bottom: 10px;
+                margin-right: 2%;
+            }
+
+            .slide>nav>a:nth-child(2){
+                margin-bottom: 10px;
+            }
+
+            .slide>nav>a:nth-child(3){
+                margin-right: 2%;
+            }
+
+            #main:target,#slide-1:target{
+                left: 0%;
+            }
+            #main:target header>h1, #slide-1:target header>h1{
+                right: 0;
+                opacity: 1;
+            }
+            #slide-1:target header>a{
+                left: 0%;
+            }
+        </style>
+    </head>
+    <body>
+        <section class="box">
+
+            <div id="main">
+                <header>
+                    <h1>EXPLORE THIS</h1>
+                </header>
+                <nav>
+                    <a href="#slide-1">PHILOSOPHY</a>
+                    <a>SCIENCE</a>
+                    <a>LITERATURE</a>
+                </nav>
+            </div>
+
+            <div class="slide" id="slide-1">
+                <header>
+                    <h1>PHILOSOPHY</h1>
+                    <a href="#main"></a>
+                </header>
+                <nav class="clear">
+                    <a href="#slide-1-1" style="background-image: url('img/11.jpg');">EPISTEMOLOGY</a>
+                    <a href="#slide-1-2" style="background-image: url('img/12.jpg');">METAPHYSICS</a>
+                    <a href="#slide-1-3" style="background-image: url('img/13.jpg');">AESTHETICS</a>
+                    <a href="#slide-1-4" style="background-image: url('img/14.jpg');">ETHICS</a>
+                </nav>
+            </div>
+            <div class="slide" id="slide-1-1">
+                <header>
+                    <h1>Metaphysics</h1>
+                    <a href="#slide-1"></a>
+                </header>
+                <article></article>
+            </div>
+            <div id="slide-1-2"></div>
+            <div id="slide-1-3"></div>
+            <div id="slide-1-4"></div>
+
+        </section>
+    </body>
+</html>

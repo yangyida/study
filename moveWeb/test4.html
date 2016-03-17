@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+        <script type="text/javascript">
+            document.addEventListener("DOMContentLoaded", function(){
+
+                var bgEl = document.getElementById("bg");
+                var btEl = document.getElementById("bt");
+
+                btEl.addEventListener("touchend", function(){
+
+                    var docEl = document.documentElement;
+
+                    bgEl.style.width = "100%";
+                    bgEl.style.height = "100%";
+                    bgEl.style.display = "block";
+
+                }, false);
+
+                bgEl.addEventListener("touchend", function(){
+
+                    this.style.display = "none";
+
+                }, false);
+
+                var aArr = document.querySelectorAll("a");
+
+                for(var i = 0; i < aArr.length; i++){
+                    aArr[i].addEventListener("click", function(e){
+
+                        e.preventDefault();
+
+                    }, false);
+
+                    aArr[i].addEventListener("touchend", function(e){
+
+                        if(this.target == "_blank"){
+                            window.open(this.href, this.target);
+                        }else{
+                            location.href = this.href;
+                        }
+                    }, false);
+                }
+
+            }, false);
+        </script>
+        <style type="text/css">
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            a{
+                -webkit-tap-highlight-color: rgba(255,255,255,0);
+            }
+            button{
+                -webkit-tap-highlight-color: rgba(255,255,255,0);
+                font-size: 6rem;
+            }
+            #bg{
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: rgba(0,0,0,0.2);
+                z-index: 100;
+                display: none;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="bg"></div>
+        <button id="bt">show bg</button>
+        <a href="http://www.baidu.com/" target="_blank">百度11</a>
+        <input type="file" accept="image/*">
+        <input type="file" accept="video/*" >
+        <div style="height: 50px; overflow-y: auto; -webkit-overflow-scrolling:touch;">
+            2<br>111<br>1<br>111<br>1<br>111<br>1<br>111<br>1<br>111<br>1<br>111<br>
+            1<br>111<br>1<br>111<br>1<br>111<br>1<br>111<br>1<br>111<br>1<br>111<br>
+            1<br>111<br>1<br>111<br>1<br>111<br>1<br>111<br>1<br>111<br>1<br>111<br>
+        </div>
+    </body>
+</html>
